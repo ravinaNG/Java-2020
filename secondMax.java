@@ -1,7 +1,7 @@
 import java.util.Arrays;
 public class secondMax {
     public static void main(String[] args) {
-        int list[] = {3, 1, 2, 5, 4};
+        int list[] = {0, 1, 6, 2, 5, 10};
         int max_num = 0;
         int iteration = 0;
         while(iteration<list.length){
