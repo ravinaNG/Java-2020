@@ -8,12 +8,12 @@ public class primeNumber{
        int checkingNum = 2;
        int checkedNum = 1;
         while (checkingNum < userNum) {
-            checkingNum++;
             if(userNum%checkingNum==0){
                 checkedNum = 0;
                 System.out.println("This is not a prime number.");
                 break;
             }
+            checkingNum++;
         }
         if(checkedNum==1){
             System.out.println("This is a prime number.");
