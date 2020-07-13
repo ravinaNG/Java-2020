@@ -1,5 +1,5 @@
 public class ghost_room {
-    public static void main(int[] array) {
+    public static void main(String[] array) {
         int[][] main_list = new int[][]{{5, 2, 3, 0}, 
                                         {2, 0, 5, 3}, 
                                         {0, 1, 2, 1}, 
