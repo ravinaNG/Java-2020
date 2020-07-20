@@ -12,7 +12,7 @@ public class sqareRoot {
         return squareroot;
     }
     public static void main(String[] args) {
-        double number = 16;
+        double number = 121;
         double root;
         root = square(number);
         System.out.println("Number : "+number);
