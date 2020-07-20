@@ -32,6 +32,8 @@ public class kbcGame {
                 option_index++;
             }
 
+            System.out.println(" ");
+            System.out.println("** For LifeLine please enter 0 **");
             System.out.print("What is the correct answer?- ");
             int user = user_input.nextInt();
             System.out.println(" ");
@@ -54,7 +56,7 @@ public class kbcGame {
                         user = user_input.nextInt();
                         System.out.println(" ");
                         System.out.println("         *****            ");
-                        continue;
+                        // continue;
                     }
                     if(question_index>0 && question_index<answers.length){
                         System.out.println(options[question_index][question_index-1]);
@@ -63,7 +65,7 @@ public class kbcGame {
                         user = user_input.nextInt();
                         System.out.println(" ");
                         System.out.println("         *****            ");
-                        continue;
+                        // continue;
                     }
                     lifeline=lifeline+1;
                 }
