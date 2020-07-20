@@ -28,17 +28,17 @@ public class kbcGame {
             }
             System.out.print("What is the correct answer?- ");
             int user = user_input.nextInt();
-            System.out.println("          *****            ");
             System.out.println(" ");
+            System.out.println("         *****            ");
             if(user==answers[question_index]){
                 System.out.println("Congratulations! you are correct :)");
-                System.out.println(" ");
                 System.out.println("         *****          ");
+                System.out.println(" ");
             }
             else{
                 System.out.println("Oh Sorry!, your answer is wrong :(");
-                System.out.println(" ");
                 System.out.println("         *****          ");
+                System.out.println(" ");
             }
             question_index++;
         }
