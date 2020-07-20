@@ -10,7 +10,7 @@ public class kbcGame {
             "Q. Ravina fluint in?", 
             "Q. How many sister are there in Ravina's family?"
         };
-        
+
         String[][] options = new String[][]{
             {"1. Navgurukul", "2. Rootbridge", "3. P.P.", "4. Pratham"},
             {"1. Intern(Tech team)", "2. Imployee(tech team)", "3. One of Team members(NG)", "4. Nonetech"},
@@ -21,6 +21,7 @@ public class kbcGame {
         int[] answers = new int[]{2, 1, 4, 1, 1};
         Scanner user_input = new Scanner(System.in);
         int question_index = 0;
+        int lifeline = 1;
 
         while(question_index<questions.length){
             System.out.println(questions[question_index]);
@@ -35,6 +36,27 @@ public class kbcGame {
             int user = user_input.nextInt();
             System.out.println(" ");
             System.out.println("         *****            ");
+
+            if(user==0){
+                if(lifeline<2){
+                    System.out.println("Hey, you have used your lifeline.");
+                    System.out.println("Please try once more, don't give it up!");
+                    System.out.println("         *****            ");
+                    System.out.println(" ");
+                    continue;
+                }
+                else{
+                    if(question_index==0){
+                        System.out.println(options[1]);
+                        System.out.println(options[3]);
+                    }
+                    if(question_index>0 && question_index<answers.length){
+                        System.out.println(options[question_index-1]);
+                        System.out.println(options[question_index]);  
+                    }
+                }
+                lifeline=lifeline+1;
+            }
 
             if(user==answers[question_index]){
                 System.out.println("Congratulations! you are correct :)");
