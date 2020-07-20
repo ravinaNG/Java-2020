@@ -38,7 +38,7 @@ public class kbcGame {
             System.out.println("         *****            ");
 
             if(user==0){
-                if(lifeline<2){
+                if(lifeline>1){
                     System.out.println("Hey, you have used your lifeline.");
                     System.out.println("Please try once more, don't give it up!");
                     System.out.println("         *****            ");
@@ -46,16 +46,27 @@ public class kbcGame {
                     continue;
                 }
                 else{
+                    System.out.println(questions[question_index]);
                     if(question_index==0){
-                        System.out.println(options[1]);
-                        System.out.println(options[3]);
+                        System.out.println(options[question_index][1]);
+                        System.out.println(options[question_index][3]);
+                        System.out.print("What is the correct answer?- ");
+                        user = user_input.nextInt();
+                        System.out.println(" ");
+                        System.out.println("         *****            ");
+                        continue;
                     }
                     if(question_index>0 && question_index<answers.length){
-                        System.out.println(options[question_index-1]);
-                        System.out.println(options[question_index]);  
+                        System.out.println(options[question_index][question_index-1]);
+                        System.out.println(options[question_index][question_index]);  
+                        System.out.print("What is the correct answer?- ");
+                        user = user_input.nextInt();
+                        System.out.println(" ");
+                        System.out.println("         *****            ");
+                        continue;
                     }
+                    lifeline=lifeline+1;
                 }
-                lifeline=lifeline+1;
             }
 
             if(user==answers[question_index]){
