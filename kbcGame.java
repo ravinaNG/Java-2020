@@ -22,14 +22,18 @@ public class kbcGame {
         while(question_index<questions.length){
             System.out.println(questions[question_index]);
             int option_index = 0;
-            while(option_index<options.length){
+            while(option_index<options.length-1){
                 System.out.println(options[question_index][option_index]);
                 option_index++;
             }
             System.out.print("What is the correct answer?- ");
+            System.out.println("          *****            ");
+            System.out.println(" ");
             int user = user_input.nextInt();
             if(user==answers[question_index]){
                 System.out.println("Congratulations! you are correct :)");
+                System.out.println(" ");
+                System.out.println("         *****          ");
             }
             else{
                 System.out.println("Oh Sorry!, your answer is wrong :(");
