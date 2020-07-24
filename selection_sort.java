@@ -1,6 +1,7 @@
+import java.util.Arrays;
 public class selection_sort {
     public static void main(String[] args) {
-        int[] list = new int[]{5, 1, 12, -5, 16, 2, 12, 14};
+        int[] list = {5, 1, 12, -5, 16, 2, 12, 14};
         int counter = 0;
         int swape_num = 0;
         while(counter<list.length){
@@ -19,6 +20,6 @@ public class selection_sort {
             list[mini_num_index] = swape_num;
             counter++;
         }
-        System.out.println(list);
+        System.out.println(list.toString(list));
     }
 }
